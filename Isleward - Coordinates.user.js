@@ -11,6 +11,6 @@
 (function () {
     var scriptElement = document.createElement( "script" );
     scriptElement.type = "text/javascript";
-    scriptElement.src = "https://cdn.rawgit.com/Isleward-Addon-Dev-Group/PlayerCoordinates/master/coordinates.js";
+    scriptElement.src = "https://cdn.rawgit.com/Isleward-Addon-Dev-Group/X-Y-Coordnates/master/coordinates.js";
     document.body.appendChild( scriptElement );
 })();
