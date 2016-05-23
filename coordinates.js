@@ -9,7 +9,7 @@ addons.register({
             .appendTo(this.uiContainer);
 			
         this.startdpstime = new Date;
-		//this.totaldamage;
+		this.totaldamage = 0;
 		
         this.uiCoordinates.css({
             'position': "absolute",
@@ -22,7 +22,7 @@ addons.register({
 		this.uiTotalDamage.css({
             'position': "absolute",
             'left': (this.uiContainer[0].clientWidth / 4.5),
-            'top':  (this.uiContainer[0].clientHeight / 10) ,
+            'top':  (this.uiContainer[0].clientHeight / 11) ,
             'background-color': "#3c3f4c",
             'border': "4px solid #3c3f4c",
             'color':"white",
@@ -57,16 +57,14 @@ addons.register({
         if (!window.player) {
             return;
         }
-        console.log("source " + args.source);
-		console.log("player " + window.player.id);
+
 		var nowTime = +new Date;
         if (args.source == window.player.id) {
 			 console.log("start " + this.startdpstime);
 			 var DPS = args.amount/(((Number(nowTime) - Number(this.startdpstime))/1000));
 			 this.totaldamage += args.amount;
-			 console.log(DPS);
 			 document.getElementById('dps').textContent = "DPS = " + DPS.toFixed(2);
-			 document.getElementById('totaldmg').textContent = "Total Damage = " + this.totaldamage;
+			 document.getElementById('totaldmg').textContent = "Total Damage = " + this.totaldamage.toFixed(2);
 			 this.startdpstime = new Date;
 		}
     },
