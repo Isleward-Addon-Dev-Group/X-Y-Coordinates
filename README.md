@@ -12,6 +12,6 @@
 
 ## Screenshot
 
-[Map](https://raw.githubusercontent.com/Isleward-Addon-Dev-Group/X-Y-Coordinates/master/Screenshot.gif)
+![Map](https://raw.githubusercontent.com/Isleward-Addon-Dev-Group/X-Y-Coordinates/master/Screenshot.gif)
 
 
